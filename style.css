@@ -1,0 +1,117 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: rgb(74 7 255 / 20%);
+  height: 100vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.reload-button, .score-button, .save-button {
+  width: 70px;
+  height: 30px;
+  background-color: #ffc53b;
+  border: 2px solid #ff9800;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.canvas-game {
+  border: 2px solid #ff9800;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+}
+.canvas-popup {
+  position: fixed;
+  animation: appear .5s ease forwards;
+  background-color: #ffc53b;
+  border-radius: 20px;
+  border: 2px solid #ff9800;
+  top: -350px;
+  transition: 0.2s all linear;
+  z-index: 10;
+}
+.active {
+  top: 50px;
+}
+@keyframes disappear {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+    display: block;
+  }
+}
+.game-play{
+  animation: appear .5s ease forwards;
+}
+.opacity {
+  animation: disappear .5s ease forwards;
+}
+.game-statistics {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px;
+}
+.game-statistics div {
+  flex-grow: 0.5;
+}
+.sounds-button {
+  background: #ffc53b;
+  width: 21px;
+  height: 21px;
+  border-radius: 20px;
+  padding: 7px;
+  border: 2px solid #ff9800;
+  cursor: pointer;
+}
+.sounds-button:hover {
+  transform: scale(1.1);
+}
+.sounds-button-none {
+  opacity: 0.4;
+}
+.navigation, .game-state {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  min-width: 300px;
+}
+select {
+  width: 55px;
+  height: 28px;
+  border: 2px solid #ff9800;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #ffc53b;
+  color: #ffffff;
+}
+.hidden {
+  display: none;
+}
+span {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
